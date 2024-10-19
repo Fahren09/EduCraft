@@ -9,7 +9,7 @@ CREATE TABLE Usuario (
     NombreCompleto VARCHAR(100),
     Genero VARCHAR(20),
     FechaNacimiento DATE,
-    Email VARCHAR(50),
+    Email VARCHAR(50) UNIQUE,
     Contraseña VARCHAR(20),
     NumeroIntentosContraseña INT,
     FechaRegistroYActualizacionInfo DATETIME,
