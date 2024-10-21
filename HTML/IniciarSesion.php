@@ -21,11 +21,12 @@
         <h2 class="page-title">Iniciar Sesión</h2>
         <p class="subtitle">Comienza a aprender a tu propio ritmo</p>
 
-        <form class="login-form" id="loginForm" method="POST">
+        <form class="login-form" id="loginForm" method="POST" action="../PHP/IniciarSesion.php">
+            <div id="messages" class="d-none alert" role="alert"></div>
             <div class="form-group">
-                <label for="username">Nombre de Usuario:</label>
-                <input type="text" class="form-control custom-input" id="username" name="username">
-                <div id="usernameError" class="text-danger"></div>
+                <label for="email">Correo Electrónico:</label>
+                <input type="text" class="form-control custom-input" id="email" name="email">
+                <div id="emailError" class="text-danger"></div>
             </div>
             <div class="form-group">
                 <label for="password">Contraseña:</label>
@@ -42,8 +43,6 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../JS/IniciarSesion.js"></script>
+    <script src="../JS/IniciarSesion-1.js"></script>
 </body>
 </html>

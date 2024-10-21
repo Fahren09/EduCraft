@@ -36,7 +36,7 @@
                         <a class="dropdown-item" href="../PHP/Mensajeria-Estudiante.php">Mensajes</a>
 
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="../PHP/PaginaPrincipal.php">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
+                        <a class="dropdown-item" href="../HTML/PaginaPrincipal.php">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
                     </div>
                 </li>
             </ul>

@@ -1,37 +1,47 @@
 <?php
-/*
-include 'Conexion.php';
+// Incluir el archivo de conexión
+require_once 'Conexion.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['username'];
-    $contrasena = $_POST['password'];
-
-    $conexion = new Conexion();
-    $db = $conexion->obtenerConexion();
-
-    $sql = "CALL IniciarSesion(:email, :contrasena)";
-    $stmt = $db->prepare($sql);
-    $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':contrasena', $contrasena);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Obtener los datos del formulario
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
     try {
-        $stmt->execute();
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        // Crear una instancia de la clase Conexion
+        $conexion = new Conexion();
+        $db = $conexion->obtenerConexion();
 
-        if ($result) {
-            if (isset($result['Id_Usuario'])) {
-                // Inicio de sesión exitoso
-                header("Location: ../HTML/PaginaPrincipal-2.php");
+        // Llamar al procedimiento almacenado
+        $sql = 'CALL IniciarSesion(:email, :password, @estatusSesion)';
+        
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':password', $password);
+
+        // Ejecutar la consulta
+        if ($stmt->execute()) {
+            // Obtener el estado de sesión
+            $result = $db->query("SELECT @estatusSesion AS estatusSesion")->fetch(PDO::FETCH_ASSOC);
+            $estatusSesion = $result['estatusSesion'];
+
+            if ($estatusSesion === 'Inicio de sesión exitoso') {
+                // Redirigir a la página principal
+                header('Location: ../HTML/PaginaPrincipal-2.php');
                 exit();
             } else {
-                echo json_encode(["mensaje" => $result['mensaje']]);
+                // Mostrar el mensaje de error
+                echo '<script>window.onload = function() { alert("' . $estatusSesion . '"); }</script>';
             }
         } else {
-            echo json_encode(["mensaje" => "Error al iniciar sesión."]);
+            echo 'Error al iniciar sesión.';
         }
-    } catch (Exception $e) {
-        echo json_encode(["mensaje" => "Error en la base de datos: " . $e->getMessage()]);
+    } catch (PDOException $e) {
+        echo 'Error: ' . $e->getMessage();
     }
+} else {
+    // Manejo si no es un POST (opcional)
+    echo 'Acceso no permitido.';
+    exit();
 }
-    */
 ?>
