@@ -18,8 +18,8 @@
                 <h1>EduCraft</h1>
             </a>
         <div class="header-buttons">
-            <a href="../PHP/IniciarSesion.php" class="header-btn btn">Iniciar Sesión</a>
-            <a href="../PHP/Registro.php" class="header-btn btn">Registrarse</a>
+            <a href="../HTML/IniciarSesion.php" class="header-btn btn">Iniciar Sesión</a>
+            <a href="../HTML/Registro.php" class="header-btn btn">Registrarse</a>
         </div>
     </header>
 
