@@ -22,19 +22,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-brown" href="../PHP/DesbloqueoUsuarios.php">Desbloqueo de Usuarios</a>
+                    <a class="nav-link text-brown" href="../HTML/DesbloqueoUsuarios.php">Desbloqueo de Usuarios</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-brown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Elisa Ponce
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="../PHP/EditarUsuario-Admin.php">Perfil</a>
-                        <a class="dropdown-item" href="../PHP/EliminarComentarios.php">Comentarios</a>
-                        <a class="dropdown-item" href="../PHP/Categorias-Admin.php">Gestion de categorias</a>
-                        <a class="dropdown-item" href="../PHP/Reportes-Admin.php">Reporte de Usuarios</a>
+                        <a class="dropdown-item" href="../HTML/EditarUsuario-Admin.php">Perfil</a>
+                        <a class="dropdown-item" href="../HTML/EliminarComentarios.php">Comentarios</a>
+                        <a class="dropdown-item" href="../HTML/Categorias-Admin.php">Gestion de categorias</a>
+                        <a class="dropdown-item" href="../HTML/Reportes-Admin.php">Reporte de Usuarios</a>
 
-                        <a class="dropdown-item" href="../PHP/PaginaPrincipal.php">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
+                        <a class="dropdown-item" href="../HTML/PaginaPrincipal.php">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
                     </div>
                 </li>
             </ul>

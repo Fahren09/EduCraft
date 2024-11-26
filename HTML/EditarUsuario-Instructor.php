@@ -23,20 +23,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-brown" href="../PHP/CrearCurso.php">Crear curso</a>
+                    <a class="nav-link text-brown" href="../HTML/CrearCurso.php">Crear curso</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-brown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Brian Barrero
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="../PHP/EditarUsuario-Instructor.php">Perfil</a>
-                        <a class="dropdown-item" href="../PHP/MisCursos.php">Mis cursos y Certificados</a>
-                        <a class="dropdown-item" href="../PHP/Mensajeria-Instructor.php">Mensajes</a>
-                        <a class="dropdown-item" href="../PHP/Ventas.php">Ventas</a>
+                        <a class="dropdown-item" href="../HTML/EditarUsuario-Instructor.php">Perfil</a>
+                        <a class="dropdown-item" href="../HTML/MisCursos.php">Mis cursos y Certificados</a>
+                        <a class="dropdown-item" href="../HTML/Mensajeria-Instructor.php">Mensajes</a>
+                        <a class="dropdown-item" href="../HTML/Ventas.php">Ventas</a>
 
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="../PHP/PaginaPrincipal.php">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
+                        <a class="dropdown-item" href="../HTML/PaginaPrincipal.php">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
                     </div>
                 </li>
             </ul>

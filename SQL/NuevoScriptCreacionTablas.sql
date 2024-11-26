@@ -5,7 +5,7 @@ USE DB_BDM_CURSOS;
 CREATE TABLE Usuario (
     Id_Usuario INT AUTO_INCREMENT PRIMARY KEY,
     Rol VARCHAR(20),
-    ImagenAvatar VARCHAR(200),
+    ImagenAvatar longblob ,
     NombreCompleto VARCHAR(100),
     Genero VARCHAR(20),
     FechaNacimiento DATE,
@@ -23,6 +23,8 @@ CREATE TABLE Categoria (
     DescripcionCategoria VARCHAR(200),
     FechaHoraCreacionCategoria DATETIME,
     Id_Usuario INT,
+	EstatusCategoria VARCHAR(15),
+
     FOREIGN KEY (Id_Usuario) REFERENCES Usuario(Id_Usuario)
 );
 
@@ -34,7 +36,7 @@ CREATE TABLE Curso (
     CostoCompleto FLOAT,
     DescripcionCurso VARCHAR(200),
     PromedioCalificacion FLOAT,
-    ImagenCurso VARCHAR(200),
+    ImagenCurso longblob,
     EstatusCurso VARCHAR(20),
     NumeroVentas INT,
     FechaCreacionCurso DATETIME,
@@ -58,7 +60,7 @@ CREATE TABLE Nivel (
 
 CREATE TABLE Multimedia (
     Id_Multimedia INT AUTO_INCREMENT PRIMARY KEY,
-    Archivo BLOB,
+    Archivo VARCHAR(200),
     Id_Curso INT,
     FOREIGN KEY (Id_Curso) REFERENCES Curso(Id_Curso)
 );
@@ -108,9 +110,3 @@ CREATE TABLE Mensaje (
     Id_Usuario INT,
     FOREIGN KEY (Id_Usuario) REFERENCES Usuario(Id_Usuario)
 );
-
-
-
-
-
-

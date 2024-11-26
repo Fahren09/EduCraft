@@ -17,7 +17,7 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-brown">
-        <a class="navbar-brand font-weight-bold text-brown" href="../PHP/PaginaPrincipal-2.php">
+        <a class="navbar-brand font-weight-bold text-brown" href="../HTML/PaginaPrincipal-2.php">
             <h1>EduCraft</h1>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,19 +26,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-brown" href="../PHP/Busqueda.php">Buscar cursos</a>
+                    <a class="nav-link text-brown" href="../HTML/Busqueda.php">Buscar cursos</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-brown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Fatima Nuñez
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="../PHP/EditarUsuario.php">Perfil</a>
-                        <a class="dropdown-item" href="../PHP/Kardex.php">Kardex</a>
-                        <a class="dropdown-item" href="../PHP/Mensajeria-Estudiante.php">Mensajes</a>
+                        <a class="dropdown-item" href="../HTML/EditarUsuario.php">Perfil</a>
+                        <a class="dropdown-item" href="../HTML/Kardex.php">Kardex</a>
+                        <a class="dropdown-item" href="../HTML/Mensajeria-Estudiante.php">Mensajes</a>
 
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="../PHP/PaginaPrincipal.php">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
+                        <a class="dropdown-item" href="../HTML/PaginaPrincipal.php">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
                     </div>
                 </li>
             </ul>

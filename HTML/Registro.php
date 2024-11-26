@@ -14,16 +14,16 @@
 </head>
 <body>
     <header>
-            <a href="../PHP/PaginaPrincipal.php" class="logo-link">
+            <a href="../HTML/PaginaPrincipal.php" class="logo-link">
                 <h1>EduCraft</h1>
             </a>
     </header>
-    
+   
     <div class="main-content">
         <h2 class="page-title">Crear Cuenta</h2>
         <p class="subtitle">Comienza a aprender a tu propio ritmo</p>
-        <form class="register-form" action="../PHP/Registro.php" method="POST" enctype="multipart/form-data">
-            <div class="row">
+        <form class="register-form" action="../PHP/Registro.php" method="POST" enctype="multipart/form-data" novalidate>
+        <div class="row">
                 <div class="form-group col-md-6">
                     <label for="full-name">Nombre Completo:</label>
                     <input type="text" class="form-control custom-input" id="full-name" name="full-name">
@@ -77,7 +77,8 @@
                 </div>
             </div>
                         <!-- Mensajes de validación -->
-                        <div id="messages" class="alert d-none"></div>
+                        <div id="messages" class="alert d-none" style="display: none;"></div>
+
             <div class="text-center">
                 <button type="submit" class="btn custom-button">Registrarme</button>
             </div>

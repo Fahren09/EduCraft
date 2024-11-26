@@ -5,11 +5,11 @@ USE DB_BDM_CURSOS;
 ALTER TABLE Usuario
 MODIFY COLUMN Id_Usuario INT AUTO_INCREMENT COMMENT 'Identificador único para la tabla Usuario',
 MODIFY COLUMN Rol VARCHAR(20) COMMENT 'Ya sea Administrador, Estudiante o Instructor',
-MODIFY COLUMN ImagenAvatar VARCHAR(200) COMMENT 'Ruta de la imagen de perfil del usuario',
+MODIFY COLUMN ImagenAvatar longblob COMMENT 'Ruta de la imagen de perfil del usuario',
 MODIFY COLUMN NombreCompleto VARCHAR(100) COMMENT 'Nombre completo del usuario',
 MODIFY COLUMN Genero VARCHAR(20) COMMENT 'Género del usuario',
 MODIFY COLUMN FechaNacimiento DATE COMMENT 'Fecha de nacimiento del usuario',
-MODIFY COLUMN Email VARCHAR(50) COMMENT 'Correo electrónico del usuario',
+MODIFY COLUMN Email VARCHAR(50) UNIQUE COMMENT 'Correo electrónico del usuario',
 MODIFY COLUMN Contraseña VARCHAR(20) COMMENT 'Debe de incluir 8 caracteres al menos, y debe incluir una mayúscula, un carácter especial, y un número al menos.',
 MODIFY COLUMN NumeroIntentosContraseña INT COMMENT 'Máximo 3 intentos, sino, se deshabilitará el Usuario',
 MODIFY COLUMN FechaRegistroYActualizacionInfo DATETIME COMMENT 'Se guarda tanto cuando se registra, así como también cuando se modifica la información personal, se sobrescribe la fecha',
@@ -35,7 +35,7 @@ MODIFY COLUMN CantidadNiveles INT COMMENT 'Número total de niveles en el curso'
 MODIFY COLUMN CostoCompleto FLOAT COMMENT 'Costo del curso, aunque puede haber cursos completamente gratis',
 MODIFY COLUMN DescripcionCurso VARCHAR(200) COMMENT 'Descripción del curso',
 MODIFY COLUMN PromedioCalificacion FLOAT COMMENT 'Este se actualizará constantemente dependiendo de los comentarios y calificaciones que se hagan. Sacando un promedio de estas',
-MODIFY COLUMN ImagenCurso VARCHAR(200) COMMENT 'Imagen representativa del curso',
+MODIFY COLUMN ImagenCurso longblob COMMENT 'Imagen representativa del curso',
 MODIFY COLUMN EstatusCurso VARCHAR(20) COMMENT 'Activo o Inactivo',
 MODIFY COLUMN NumeroVentas INT COMMENT 'Este se actualizaría constantemente dependiendo de las transacciones que se hagan, se hace una operación COUNT y el resultado se pone en esta columna',
 MODIFY COLUMN FechaCreacionCurso DATETIME COMMENT 'Fecha de creación del curso',
@@ -58,7 +58,7 @@ MODIFY COLUMN Id_Curso INT COMMENT 'Id del curso al que pertenece el nivel';
 /*Multimedia*/
 ALTER TABLE Multimedia
 MODIFY COLUMN Id_Multimedia INT AUTO_INCREMENT COMMENT 'Identificador único para la tabla Multimedia',
-MODIFY COLUMN Archivo BLOB COMMENT 'Puede ser PDF, algún archivo adjunto, imágenes, videos, etc.',
+MODIFY COLUMN Archivo VARCHAR(200) COMMENT 'Puede ser PDF, algún archivo adjunto, imágenes, videos, etc.',
 MODIFY COLUMN Id_Curso INT COMMENT 'Id del curso al que pertenece el archivo multimedia';
 
 

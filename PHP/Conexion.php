@@ -6,19 +6,14 @@ class Conexion {
         $Host = 'localhost';
         $Usuario = 'root';
         $Contrasena = '';
-        $Puerto = 3307; // Cambia el puerto si es necesario
+        $Puerto = 3307;
         $DBnombre = 'DB_BDM_CURSOS'; // Nombre de la base de datos
         
         try {
             // Establecer la conexión con PDO al servidor MySQL
             $this->conexion = new PDO("mysql:host=$Host;port=$Puerto", $Usuario, $Contrasena);
             $this->conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-            // Crear la base de datos si no existe
-            //$sqlCreateDB = "CREATE DATABASE IF NOT EXISTS $DBnombre";
-            //$this->conexion->exec($sqlCreateDB);
-            //echo "Base de datos creada o ya existía.<br>";
-
+            
             // Usar la base de datos
             $this->conexion->exec("USE $DBnombre");
             echo "Usando la base de datos: $DBnombre. 😊<br>";
@@ -38,7 +33,7 @@ class Conexion {
             }
 
         } catch (PDOException $exp) {
-            // Mostrar mensaje de error si la conexión o la ejecución de SQL falla
+
             echo "Fallo la conexión o la ejecución de SQL :(<br>";
             die($exp->getMessage());
         }
